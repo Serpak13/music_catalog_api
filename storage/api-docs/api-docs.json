@@ -1,0 +1,72 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "My Doc API",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/": {},
+        "/api/catalog": {
+            "get": {
+                "tags": [
+                    "Catalog"
+                ],
+                "summary": "Отображение каталога",
+                "operationId": "fdf978a650178916254670cc447cf9e4",
+                "responses": {
+                    "200": {
+                        "description": "Music album details",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "Исполнитель": {
+                                            "properties": {
+                                                "Имя": {
+                                                    "type": "string",
+                                                    "example": "Cedrick Hand I"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "Альбом": {
+                                            "type": "string",
+                                            "example": "Totam omnis qui."
+                                        },
+                                        "Год выпуска": {
+                                            "type": "integer",
+                                            "example": 1984
+                                        },
+                                        "Песни": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "Название": {
+                                                        "type": "string",
+                                                        "example": "Possimus dicta quisquam repudiandae."
+                                                    },
+                                                    "Порядковый номер в альбоме": {
+                                                        "type": "integer",
+                                                        "example": 2
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Catalog",
+            "description": "Catalog"
+        }
+    ]
+}
